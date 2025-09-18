@@ -1,6 +1,5 @@
 import orderByProps from "../js/orderByProps";
 
-
 test("Корректная сортировка", () => {
   const obj = {
     name: "мечник",
