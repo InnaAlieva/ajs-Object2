@@ -3,14 +3,13 @@ export const getSpecialAttacks = ({ special }) => {
         id,
         name,
         icon,
-        description: description || 'Описание недоступно'
+        description: description || "Описание недоступно"
     }));
 };
 
-// Пример использования
 const character = {
-    name: 'Лучник',
-    type: 'Bowman',
+    name: "Лучник",
+    type: "Bowman",
     health: 50,
     level: 3,
     attack: 40,
@@ -18,18 +17,19 @@ const character = {
     special: [
         {
             id: 8,
-            name: 'Двойной выстрел',
-            icon: 'http://...',
-            description: 'Двойной выстрел наносит двойной урон'
+            name: "Двойной выстрел",
+            icon: "http://...",
+            description: "Двойной выстрел наносит двойной урон"
         },
         {
             id: 9,
-            name: 'Нокаутирующий удар',
-            icon: 'http://...'
-            // Описание "засекречено"
+            name: "Нокаутирующий удар",
+            icon: "http://..."
+          
         }
     ]
 };
 
 
 console.log(getSpecialAttacks(character));
+
