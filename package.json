@@ -1,5 +1,5 @@
 {
-  "name": "ajs-object",
+  "name": "ajs-object2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -36,12 +36,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/InnaAlieva/ajs-object.git"
+    "url": "git+https://github.com/InnaAlieva/ajs-object2.git"
   },
   "bugs": {
-    "url": "https://github.com/InnaAlieva/ajs-object/issues"
+    "url": "https://github.com/InnaAlieva/ajs-object2/issues"
   },
-  "homepage": "https://github.com/InnaAlieva/ajs-object#readme",
+  "homepage": "https://github.com/InnaAlieva/ajs-object2#readme",
  "devDependencies": {
     "@babel/cli": "^7.15.4",
     "@babel/core": "^7.15.5",
