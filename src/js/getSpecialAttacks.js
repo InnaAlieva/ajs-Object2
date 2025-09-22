@@ -61,7 +61,3 @@ const unit3 = {
   attack: 40,
   defence: 10,
 };
-
-console.log(getDescription(unit));
-console.log(getDescription(unit2));
-console.log(getDescription(unit3));
