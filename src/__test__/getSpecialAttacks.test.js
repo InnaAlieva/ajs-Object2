@@ -1,14 +1,14 @@
 import { getSpecialAttacks } from "../js/getSpecialAttacks";
 
-test('должен вернуть массив специальных атак с описаниями', () => {
-    const character = {
-        special: [
-            {
-                id: 1,
-                name: "Атака 1",
-                icon: "http://...",
-                description: "Описание 1"
-            },
+test("должен вернуть массив специальных атак с описаниями", () => {
+const character = {
+    special: [
+        {
+            id: 1,
+            name: "Атака 1",
+            icon: "http://...",
+            description: "Описание 1"
+        },
             {
                 id: 2,
                 name: "Атака 2",
