@@ -1,6 +1,6 @@
 import { getSpecialAttacks } from "../js/getSpecialAttacks";
 
-test("должен вернуть массив специальных атак с описаниями", () => {
+test('должен вернуть массив специальных атак с описаниями', () => {
     const character = {
         special: [
             {
