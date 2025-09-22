@@ -1,37 +1,72 @@
-import { getSpecialAttacks } from "../js/getSpecialAttacks";
+import getDescription from "../js/getSpecialAttacks";
 
-test("должен вернуть массив специальных атак с описаниями", () => {
-const character = {
+test("Получим массив с двумя элементами, у одного из которых описание не определено", () => {
+  const unit = {
+    name: "Лучник",
+    type: "Bowman",
+    health: 50,
+    level: 3,
+    attack: 40,
+    defence: 10,
     special: [
-        {
-            id: 1,
-            name: "Атака 1",
-            icon: "http://...",
-            description: "Описание 1"
-        },
-            {
-                id: 2,
-                name: "Атака 2",
-                icon: "http://..."
-                // Описание отсутствует
-            }
-        ]
-    };
+      {
+        id: 8,
+        name: "Двойной выстрел",
+        icon: "http://...",
+        description: "Двойной выстрел наносит двойной урон",
+      },
+      {
+        id: 9,
+        name: "Нокаутирующий удар",
+        icon: "http://...",
+        // <- обратите внимание, описание "засекречено"
+      },
+    ],
+  };
+  const description = getDescription(unit);
+  const result = [
+    {
+      id: 8,
+      name: "Двойной выстрел",
+      icon: "http://...",
+      description: "Двойной выстрел наносит двойной урон",
+    },
+    {
+      id: 9,
+      name: "Нокаутирующий удар",
+      icon: "http://...",
+      description: "Описание недоступно",
+    },
+  ];
+  expect(description).toEqual(result);
+});
 
-    const expected = [
-        {
-            id: 1,
-            name: "Атака 1",
-            icon: "http://...",
-            description: "Описание 1"
-        },
-        {
-            id: 2,
-            name: "Атака 2",
-            icon: "http://...",
-            description: "Описание недоступно"
-        }
-    ];
 
-    expect(getSpecialAttacks(character)).toEqual(expected);
+test("special пустой, вернет пустой массив", () => {
+  const unit = {
+    name: "Лучник",
+    type: "Bowman",
+    health: 50,
+    level: 3,
+    attack: 40,
+    defence: 10,
+    special: [],
+  };
+  const description = getDescription(unit);
+  const result = [];
+  expect(description).toEqual(result);
+});
+
+test("special вообще нет, вернет пустой массив", () => {
+  const unit = {
+    name: "Лучник",
+    type: "Bowman",
+    health: 50,
+    level: 3,
+    attack: 40,
+    defence: 10,
+  };
+  const description = getDescription(unit);
+  const result = [];
+  expect(description).toEqual(result);
 });
